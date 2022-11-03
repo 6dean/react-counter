@@ -11,20 +11,21 @@ function App() {
       <div className="my-counter">
         <div className="container">
           <button
+            disabled={counter !== 0 ? false : true}
             onClick={() => {
               setCounter(counter - 1);
             }}
-            className={counter === 0 && "undisplay"}
           >
             -
           </button>
 
           <div className="counter-screen">{counter}</div>
+
           <button
+            disabled={counter !== 10 ? false : true}
             onClick={() => {
               setCounter(counter + 1);
             }}
-            className={counter >= 10 && "undisplay"}
           >
             +
           </button>
